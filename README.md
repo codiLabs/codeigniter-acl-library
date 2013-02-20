@@ -59,6 +59,17 @@ Than, we need formated array access
 
 Access library required to load automatically on your autoload config.
 
+
+###Functions List
+* `is_logged` user logged status //autoused
+* `is_create` create access detector
+* `is_read` read access detector //autoused
+* `is_update` update access detector
+* `is_delete` delete access detector
+* `is_approve` approve access detector
+* `is_print` print access detector
+
+
 ###Example
 
 	if($this->access->in_create())
