@@ -55,7 +55,7 @@ Than, we need formated array access
 	        )
 	
 	)
-if verify login proccess, set into session with userdata
+Custom it as needed to group table on your database, and put it and set into session with others userdata when user is logged in.
 
 
 ###Functions List
