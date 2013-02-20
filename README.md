@@ -6,6 +6,7 @@ This is an CodeIgniter library to managing your user access.
 * If you haven't field for segment record in your table menus, alter it or add the sample table from file menu_table.sql 
 
 You can now autoload the library or include it in one of your controllers at run time.
+But, access library recommended to load automatically on your autoload config.
 
 ### What was needed?
 At first, please set your login page on Access file 
@@ -54,10 +55,7 @@ Than, we need formated array access
 	        )
 	
 	)
-
-
-
-Access library required to load automatically on your autoload config.
+if verify login proccess, set into session with userdata
 
 
 ###Functions List
