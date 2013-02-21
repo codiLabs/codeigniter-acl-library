@@ -124,9 +124,19 @@ class CI_Access {
 		{
 			$this->ignored = true;
 		}
+		
+		$access_id = array();
+		if($this->accessibility) {
+			foreach($this->accessibility as $access)
+			{
+				$access_id = array_merge($access_id, $access);
+			}
+
+			$access_id = array_unique($access_id);
+		}
 
 		//get menu id of segment detected
-		$this->menu_id = $this->get_menu_id();
+		$this->menu_id = $this->get_menu_id($access_id);
 
 		if($this->is_logged())
 		{
@@ -150,7 +160,13 @@ class CI_Access {
 	 */
 	function get_menu_id()
 	{
-		return $this->db->where($this->segment_field, $this->request_page)->count_all_results($this->table_menu);
+		$result = 0;
+		if(count($access_id)>0)
+		{
+			$result = $this->db->where("`".$this->segment_field."` = '".$this->request_page."' AND `".$this->field_id_menu."` IN (".implode(',', $access_id).")")->count_all_results($this->table_menu);
+		}
+			
+		return $result;
 	}
 
 	// --------------------------------------------------------------------
