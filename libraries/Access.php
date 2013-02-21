@@ -25,7 +25,6 @@
  */
 class CI_Access {
 
-
 	protected $ignored										= false;
 
 	// to get controller name
