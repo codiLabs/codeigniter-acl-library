@@ -99,7 +99,7 @@ class CI_Access {
 
 		//checking request page
 		$this->request_page = ($this->function_segment)?$this->full_path:$this->controller_segment;
-
+		$this->db_checker = $this->controller_segment;
 
 
 		// if user is not logged in and not in login path
@@ -163,7 +163,7 @@ class CI_Access {
 		$result = 0;
 		if(count($access_id)>0)
 		{
-			$result = $this->db->where("`".$this->segment_field."` = '".$this->request_page."' AND `".$this->field_id_menu."` IN (".implode(',', $access_id).")")->count_all_results($this->table_menu);
+			$result = $this->db->where("`".$this->segment_field."` = '".$this->db_checker."' AND `".$this->field_id_menu."` IN (".implode(',', $access_id).")")->count_all_results($this->table_menu);
 		}
 			
 		return $result;
