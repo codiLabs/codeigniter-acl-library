@@ -4,13 +4,13 @@
  *
  * An open source application development framework for PHP 5.1.6 or newer
  *
- * @package			CodeIgniter
- * @author			Anthoplara [codinger]
- * @copyright		Copyright (c) 2013, codiLabs, Inc.
- * @since				Version 1.0
- * @email				appdev@codilabs.com
+ * @package	CodeIgniter
+ * @author	Anthoplara [codinger]
+ * @copyright	Copyright (c) 2013, codiLabs, Inc.
+ * @since	Version 1.0
+ * @email	appdev@codilabs.com
  * @filesource	//codilabs.github.com/codeigniter-acl-library
- * @website			//codilabs.com
+ * @website	//codilabs.com
  */
 
 // ------------------------------------------------------------------------
@@ -18,42 +18,42 @@
 /**
  * Access Class
  *
- * @package			CodeIgniter
+ * @package	CodeIgniter
  * @subpackage	Libraries
- * @category		Access Control Lists
- * @author			codiLabs Dev Team
+ * @category	Access Control Lists
+ * @author	codiLabs Dev Team
  */
 class CI_Access {
 
-	protected $ignored										= false;
+	protected $ignored			= false;
 
 	// to get controller name
-	protected $uri_segment								= 1;
+	protected $uri_segment			= 1;
 
 	// login path on your application
-	protected $login_path									= 'user/login';
+	protected $login_path			= 'user/login';
 
 	// session name for initializing user is logged (true/false)
-	protected $session_logged_name				= 'logged_in';
+	protected $session_logged_name		= 'logged_in';
 
 	// session name for get array access
-	protected $session_access_name				= 'access';
+	protected $session_access_name		= 'access';
 
 	// name of menu table
-	protected $table_menu									= 'menu';
+	protected $table_menu			= 'menu';
 
 	// fieldname of path menu on your menu table | ex. article or blog/read
-	protected $segment_field							= 'menu_segment';
+	protected $segment_field		= 'menu_segment';
 
 	/**
 	* logged user allowed to access controller and user inherits from the role
 	* ex. array('user'=> array('logout','notification'),'customer'=>array('view'));
 	* allowed to access user/logout, user/notification and customer/view
 	*/
-	protected $ignored_access							= array();
+	protected $ignored_access		= array();
 
 	//name of query string to bring you referrer role before showing login page
-	protected $redirect_query_string			= 'redirect';
+	protected $redirect_query_string	= 'redirect';
 
 
 	// --------------------------------------------------------------------
