@@ -9,7 +9,7 @@
  * @copyright		Copyright (c) 2013, codiLabs, Inc.
  * @since				Version 1.0
  * @email				appdev@codilabs.com
- * @filesource	//codilabs.github.com/acl-ci-library
+ * @filesource	//codilabs.github.com/codeigniter-acl-library
  * @website			//codilabs.com
  */
 
